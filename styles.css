@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #F4F5FB; /* background-primary */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #CA3884; /* color-brand */
+}
+
+body {
+  width: 100vw;
+  height: 90%;
+  background-color: #F4F5FB; /* background-primary */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  font-family: "Urbanist", sans-serif;
+
+  padding: 32px;
+}
+
+h1 {
+  color: #080B12; /* content-primary */
+  margin: 15px 0 50px 0;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center; /* Centraliza o título */
+}
+
+form {
+  margin-top: 42px;
+  min-width: 690px;
+  display: flex;
+  gap: 9px;
+}
+
+input {
+  flex: 1;
+  height: 56px;
+  border-radius: 5px;
+  border: 2px solid #D1D5DB; /* border-primary */
+  background-color: #FFFFFF; /* background-secondary */
+  padding: 16px;
+  color: #080B12; /* content-primary */
+  font-size: 16px;
+
+  font-family: "Urbanist", sans-serif;
+}
+
+input:focus {
+  outline: 0;
+  border-color: #CA3884; /* color-brand */
+}
+
+input:disabled {
+  opacity: 0.5;
+}
+
+button {
+  cursor: pointer;
+}
+
+.button {
+  height: 56px;
+  background-color: #CA3884; /* color-brand */
+  border-radius: 5px;
+  border: none;
+  color: #FFFFFF; /* always-white */
+  font-size: 14px;
+  font-weight: bold;
+
+  padding: 0 16px;
+  transition: background-color 0.2s;
+
+  font-family: "Urbanist", sans-serif;
+}
+
+.button:hover {
+  background-color: #A52C6B; /* color-brand-hover */
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 42px 0;
+  padding-right: 20px;
+  overflow-y: scroll;
+  max-height: 650px;
+}
+
+.guest {
+  display: flex; /* Alinha os elementos horizontalmente */
+  justify-content: space-between; /* Coloca o ícone de delete no extremo direito */
+  align-items: center; /* Alinha verticalmente os itens ao centro */
+  color: #374151; /* content-secondary */
+  font-size: 16px;
+  background-color: #FFFFFF; /* background-secondary */
+  margin-bottom: 16px;
+  padding: 16px;
+  border-radius: 5px;
+  font-family: "Urbanist", sans-serif;
+  font-weight: bold;
+}
+
+.task-icon {
+  margin-right: 12px; /* Adiciona espaçamento entre o ícone de check e o texto */
+  width: 20px; /* Define o tamanho do ícone clicável */
+  height: 20px;
+  cursor: pointer; /* Mostra o cursor de clique */
+  flex-shrink: 0; /* Garante que o ícone não encolha */
+}
+
+.checked {
+  color: #6b7280; /* Preto claro */
+  text-decoration: line-through; /* Linha cortada */
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Transição suave */
+}
+
+.task-icon.checked {
+  transform: scale(1.1); /* Leve aumento no tamanho quando marcado */
+}
+
+.delete-icon {
+  margin-left: auto; /* Empurra o ícone de delete para o lado direito */
+  width: 15px; /* Ajusta o tamanho do ícone */
+  height: 15px;
+  cursor: pointer; /* Mostra o cursor de clique */
+}
+
+.category {
+  font-size: 20px;
+  font-weight: bold;
+  color: #CA3884; /* Cor do texto da categoria */
+  margin: 42px 0; /* Espaçamento acima e abaixo */
+  font-family: "Urbanist", sans-serif;
+}
+
+span {
+  font-weight: normal; /* Remove o negrito */
+  font-family: "Urbanist", sans-serif;
+}
+
+.confirm-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff; /* Fundo branco */
+  border: 2px solid #d1d5db; /* Bordas suaves */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 800px;
+  text-align: center;
+  font-family: "Urbanist", sans-serif;
+}
+
+.confirm-box p {
+  margin-bottom: 16px;
+  color: #374151; /* Cor do texto */
+}
+
+.confirm-delete {
+  background-color: #c93847; /* Vermelho */
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.confirm-delete:hover {
+  background-color: #a52735; /* Vermelho escuro */
+}
+
+.confirm-cancel {
+  background-color: #d1d5db; /* Cinza claro */
+  color: #374151; /* Texto cinza escuro */
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirm-cancel:hover {
+  background-color: #b0b8c4; /* Cinza médio */
+}
+
+.hidden {
+  display: none;
+}

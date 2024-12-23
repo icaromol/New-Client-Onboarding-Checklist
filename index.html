@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Onboarding de Novo Cliente</title>
+  </head>
+  <body>
+    <main>
+      <h1>Onboarding de novo Cliente</h1>
+      <ul>
+
+        <!-- Organização Interna -->
+        <li class="category">Organização Interna</li>
+        <li class="guest">
+          <img src="assets/square-stroke-rounded.svg" alt="Task Icon" class="task-icon" onclick="toggleCheck(this)" />
+          <span>Criar um arquivo ou pasta dedicada ao cliente</span>
+          <img src="assets/cancel-01-stroke-rounded.svg" alt="Cancel Icon" class="delete-icon" onclick="deleteTask(this.parentElement)" />
+        </li>
+        <li class="guest">
+          <img src="assets/square-stroke-rounded.svg" alt="Task Icon" class="task-icon" onclick="toggleCheck(this)" />
+          <span>Configurar o cliente em ferramentas de gestão de projetos</span>
+          <img src="assets/cancel-01-stroke-rounded.svg" alt="Cancel Icon" class="delete-icon" onclick="deleteTask(this.parentElement)" />
+        </li>
+        <li class="guest">
+          <img src="assets/square-stroke-rounded.svg" alt="Task Icon" class="task-icon" onclick="toggleCheck(this)" />
+          <span>Cadastrar o cliente em sistemas de faturamento</span>
+          <img src="assets/cancel-01-stroke-rounded.svg" alt="Cancel Icon" class="delete-icon" onclick="deleteTask(this.parentElement)" />
+        </li>
+
+        <!-- Comunicação Inicial -->
+        <li class="category">Comunicação Inicial</li>
+        <li class="guest">
+          <img src="assets/square-stroke-rounded.svg" alt="Task Icon" class="task-icon" onclick="toggleCheck(this)" />
+          <span>Enviar um e-mail de boas-vindas com próximos passos e cronograma</span>
+          <img src="assets/cancel-01-stroke-rounded.svg" alt="Cancel Icon" class="delete-icon" onclick="deleteTask(this.parentElement)" />
+        </li>
+        <li class="guest">
+          <img src="assets/square-stroke-rounded.svg" alt="Task Icon" class="task-icon" onclick="toggleCheck(this)" />
+          <span>Solicitar documentos e materiais necessários</span>
+          <img src="assets/cancel-01-stroke-rounded.svg" alt="Cancel Icon" class="delete-icon" onclick="deleteTask(this.parentElement)" />
+        </li>
+        <li class="guest">
+          <img src="assets/square-stroke-rounded.svg" alt="Task Icon" class="task-icon" onclick="toggleCheck(this)" />
+          <span>Agendar uma reunião de kick-off para alinhamento inicial</span>
+          <img src="assets/cancel-01-stroke-rounded.svg" alt="Cancel Icon" class="delete-icon" onclick="deleteTask(this.parentElement)" />
+        </li>
+
+        <!-- Coleta de Informações -->
+        <li class="category">Coleta de Informações</li>
+        <li class="guest">
+          <img src="assets/square-stroke-rounded.svg" alt="Task Icon" class="task-icon" onclick="toggleCheck(this)" />
+          <span>Aplicar um briefing detalhado</span>
+          <img src="assets/cancel-01-stroke-rounded.svg" alt="Cancel Icon" class="delete-icon" onclick="deleteTask(this.parentElement)" />
+        </li>
+        <li class="guest">
+          <img src="assets/square-stroke-rounded.svg" alt="Task Icon" class="task-icon" onclick="toggleCheck(this)" />
+          <span>Solicitar acesso às redes sociais existentes</span>
+          <img src="assets/cancel-01-stroke-rounded.svg" alt="Cancel Icon" class="delete-icon" onclick="deleteTask(this.parentElement)" />
+        </li>
+        <li class="guest">
+          <img src="assets/square-stroke-rounded.svg" alt="Task Icon" class="task-icon" onclick="toggleCheck(this)" />
+          <span>Pedir acesso a ferramentas vinculadas</span>
+          <img src="assets/cancel-01-stroke-rounded.svg" alt="Cancel Icon" class="delete-icon" onclick="deleteTask(this.parentElement)" />
+        </li>
+
+        <!-- Configuração de Ferramentas -->
+        <li class="category">Configuração de Ferramentas</li>
+        <li class="guest">
+          <img src="assets/square-stroke-rounded.svg" alt="Task Icon" class="task-icon" onclick="toggleCheck(this)" />
+          <span>Criar ou otimizar perfis de redes sociais</span>
+          <img src="assets/cancel-01-stroke-rounded.svg" alt="Cancel Icon" class="delete-icon" onclick="deleteTask(this.parentElement)" />
+        </li>
+        <li class="guest">
+          <img src="assets/square-stroke-rounded.svg" alt="Task Icon" class="task-icon" onclick="toggleCheck(this)" />
+          <span>Configurar ferramentas de agendamento e monitoramento</span>
+          <img src="assets/cancel-01-stroke-rounded.svg" alt="Cancel Icon" class="delete-icon" onclick="deleteTask(this.parentElement)" />
+        </li>
+        <li class="guest">
+          <img src="assets/square-stroke-rounded.svg" alt="Task Icon" class="task-icon" onclick="toggleCheck(this)" />
+          <span>Vincular contas às plataformas de anúncios</span>
+          <img src="assets/cancel-01-stroke-rounded.svg" alt="Cancel Icon" class="delete-icon" onclick="deleteTask(this.parentElement)" />
+        </li>
+        <li class="category" id="other-category">Outros</li>
+        <ul id="other-tasks"></ul>
+      </ul>
+
+      <form>
+        <input type="text" placeholder="Adicionar uma nova tarefa" id="name" />
+        <button type="submit" id="btn" class="button">Adicionar</button>
+      </form>
+
+    </main>
+
+    <script src="scripts.js"></script>
+
+  </body>
+</html>
